@@ -1,0 +1,11 @@
+<div class="box">
+  <div class="form-group">
+    <label for="coords">Cordonate:</label>
+    <textarea class="form-control" rows="5" id="perimetru"></textarea>
+    <button type="submit" ng-click="loadTextCoords()" class="btn btn-default">Verifica si afiseaza</button>
+  </div>
+
+  <div class="btn btn-warning" ng-show="showAreaImport" ngf-select="upload_inner($file)" ng-model="file" name="file" ngf-pattern="'.kml,.kmz'" ngf-accept="'.kml,.kmz'" ngf-max-size="20MB">Selecteaza fisier KML/KMZ</div>
+  <button type="submit" ng-click="saveArea()" class="btn btn-primary">Salveaza</button>
+
+</div>

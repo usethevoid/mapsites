@@ -1,0 +1,46 @@
+<div class="container-fluid" ng-controller="searchPageCtrl">
+  <div class="row-fluid page">
+    <div class="col-md-3 box">
+      <div class="panel mypanel">
+        <form class="form-group" role="form">
+          <div class="form-group">
+            <label for="query">Termeni:</label>
+            <input type="text" class="form-control" id="query" ng-model="query">
+          </div>
+          <button type="submit" class="btn btn-default" ng-click="search()">Cauta</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-9 content">
+      <div class="box">
+
+
+        <table st-table="rowCollection" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nume</th>
+              <th>Categorie</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="row in sites">
+              <td>{{row.fields.nume}}</td>
+              <td>{{row.fields.categorie}}</td>
+              <td>
+                <a ng-href="#view/site/{{row.id}}" class="btn btn-sm btn-primary">
+                  <span class="glyphicon glyphicon-eye-open"></span>
+                </a>
+                <a ng-href="#mod/editsite/{{row.id}}" class="btn btn-sm btn-danger" ng-show="haveAuth">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
+  </div>
+</div>

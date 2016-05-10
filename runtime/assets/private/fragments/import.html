@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="row-fluid page" ng-controller="importCsvCtrl">
+    <div class="col-md-12">
+      <form action="/api/private/csvimport" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv">
+        <input type="submit">
+      </form>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container-fluid" ng-controller="mapPageCtrl">
+  <div class="row-fluid page" >
+    <div class="col-md-3 box" ng-controller="mapSearchBoxCtrl" >
+
+      <form ng-submit="search()">
+        <div class="panel mypanel">
+          <button type="submit" class="btn btn-success center">Cauta</button>
+        </div>
+        <div class="panel mypanel scroll">
+          <formly-form model="vm.site" fields="vm.siteFields"></formly-form>
+        </div>
+      </form>
+
+    </div>
+      <div class="col-md-9 content" id="map" style="min-height:40em;" ng-controller="mapBoxCtrl">
+    </div>
+  </div>
+</div>

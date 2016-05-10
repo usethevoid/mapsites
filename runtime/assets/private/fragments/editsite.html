@@ -1,0 +1,41 @@
+<div class="container-fluid" ng-controller="editSitePageCtrl">
+  <div class="row-fluid page" >
+    <div class="col-md-6" style="overflow-y: scroll;">
+
+      <uib-tabset>
+
+        <uib-tab heading="Detalii sit">
+          <div ng-controller="editSiteBoxCtrl">
+            <div class="box">
+              <span class="label label-info" ng-hide="lastSave == 0">Salvat la {{lastSave}}</span>
+              <button type="button" class="btn btn-danger btn-md pull-right" ng-click="delete(vm.site)" ng-hide="!is_created()" class="">Sterge</button>
+              <button type="submit" class="btn btn-primary btn-md pull-right" ng-click="save(vm.site)" ng-disabled="vm.siteForm.$invalid">
+                <span ng-if="is_created()">Salveaza</span>
+                <span ng-if="!is_created()">Creeaza</span>
+              </button>
+            </div>
+
+            <div class="box">
+              <formly-form model="vm.site" fields="vm.siteFields" class="css-form" form="vm.siteForm">
+              </formly-form>
+            </div>
+          </div>
+        </uib-tab>
+
+        <uib-tab heading="Galerie" ng-show="is_created()">
+          <div class="box" ng-controller="galleryUplCtrl">
+            <div ng-include="'private/fragments/galleryUpload.html'"></div>
+          </div>
+        </uib-tab>
+
+        <uib-tab heading="Coordonate" ng-show="is_created()">
+          <div class="box" ng-controller="shapeUplCtrl">
+            <div ng-include="'private/fragments/polyImport.html'"></div>
+          </div>
+        </uib-tab>
+
+    </div>
+    <div class="col-md-6 content" id="map" style="min-height:40em;" ng-controller="mapBoxCtrl" >
+    </div>
+  </div>
+</div>

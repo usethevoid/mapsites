@@ -1,0 +1,24 @@
+{
+  "version": "3.4.0",
+  "name": "mapsites",
+  "description": "mapsites UI",
+  "private": true,
+  "dependencies": {
+ 	"angular":"*",
+	"api-check":"*",
+	"angular-formly":"*",
+	"angular-ui-bootstrap":"*",
+  	"angular-route":"*",
+  	"ng-file-upload":"*",
+	"angular-formly-templates-bootstrap":"*",
+	"bootstrap":"*",
+        "gulp":"*",
+        "gulp-concat":"*",
+  "resumablejs":"*",
+  "ng-photoswipe":"*"
+  },
+  "scripts": {
+    "build": "sh ./build.sh"
+  },
+  "license": "MIT"
+}

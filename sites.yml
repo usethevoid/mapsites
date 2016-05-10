@@ -1,0 +1,24 @@
+appName: MapSites
+domain: web.app.localhost
+elasticHost: localhost
+elasticPort: 9300
+elasticSettings: init/sites.json
+testDataFile: init/sites.csv
+templateFile: init/sites_template.json
+googleApiKey: YOURS
+
+appFlags:
+  areasEnabled: false
+  routingEnabled: true
+
+server:
+  rootPath: /api/*
+
+database:
+  driverClass: org.postgresql.Driver
+  url: jdbc:postgresql:gis
+  user: YOURS
+  password: YOURS
+  
+
+

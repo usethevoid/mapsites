@@ -1,0 +1,97 @@
+.mypanel {
+  background-color: rgba(0,0,0,0.1);
+    padding: 1em;
+}
+
+.content{
+  background-color: white;
+  height: 100%;
+}
+
+.container-fluid {
+    padding-right: 3em;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+  background-image: url(fabric_of_squares_gray.png);
+}
+
+.box {
+    padding: 1em;
+}
+
+.btn {
+  margin: 0.5em;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.css-form input.ng-invalid.ng-touched {
+   background-color: #FFEEEE;
+ }
+
+.scroll {
+  overflow-y: scroll;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.marker-cluster-all {
+    background-color: rgba(51, 204, 255, 0.6)
+}
+
+.marker-cluster-all div {
+    background-color: rgba(0, 153, 255, 0.6)
+}
+
+.year {
+  max-width: 6em;
+  display: inline-block;
+}
+
+.epoch {
+  max-width: 5em;
+  display: inline-block;
+}
+
+.label {
+  display: inline-block;
+  margin:5px;
+}
+
+.label-md {
+  font-size: 150%;
+}
+
+.leaflet-tile {
+  cursor:default;
+}

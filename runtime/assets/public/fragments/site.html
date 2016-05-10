@@ -1,0 +1,22 @@
+<div class="container-fluid" ng-controller="sitePageCtrl">
+  <div class="row-fluid page" ng-controller="siteBoxCtrl" >
+    <div class="col-md-6" style="overflow-y:scroll;">
+      <div class="box">
+        <div ng-repeat="(name,value) in site.fields">
+
+          <div><b>{{name}}</b></br>
+            {{value}}
+          </div>
+        </div>
+
+      </div>
+
+      <div ng-if="images.length > 0" class="box gallery">
+        <ng-gallery images="images"></ng-gallery>
+      </div>
+
+    </div>
+    <div class="col-md-6 content" id="map" ng-controller="mapBoxCtrl" style="min-height:40em;">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div>
+  <input type="text" placeholder="Descriere" ng-model="title" class="form-control"></input>
+  <div class="pull-right">
+    <div class="btn-group" uib-dropdown dropdown-append-to-body>
+      <button id="btn-append-to-body" type="button" class="btn btn-default" uib-dropdown-toggle>
+        Categorie: {{imgType}}
+        <span class="caret"></span>
+      </button>
+      <ul uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+        <li role="menuitem" ng-repeat="t in imgTypes"><a ng-click="set_type(t)">{{t}}</a></li>
+
+      </ul>
+    </div>
+
+      <div class="btn btn-primary" ngf-select="upload($file)" ng-model="file" name="file"
+       ngf-accept="'image/*'" ngf-max-size="20MB">Selecteaza imagine</div>
+  </div>
+</div>
+
+<div ng-if="images.length > 0" class="box gallery">
+  <ng-gallery images="images"></ng-gallery>
+</div>
+
+<div ng-if="images.length == 0" class="box">
+  Gallery is empty
+</div>
